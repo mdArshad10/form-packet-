@@ -53,14 +53,11 @@ export function AppShell() {
           </Link>
 
           <nav className="desktop-nav" aria-label="Primary navigation">
-            <Link to="/prepare" activeProps={{ "data-active": true }}>
-              Prepare files
-            </Link>
-            <Link to="/fix" activeProps={{ "data-active": true }}>
-              Fix a rejection
-            </Link>
             <Link to="/quick-tools" activeProps={{ "data-active": true }}>
-              Quick tools
+              Compress files
+            </Link>
+            <Link to="/prepare" activeProps={{ "data-active": true }}>
+              Prepare a pack
             </Link>
             <Link to="/guides" activeProps={{ "data-active": true }}>
               Guides
@@ -92,25 +89,18 @@ export function AppShell() {
             aria-label="Mobile navigation"
           >
             <Link
-              to="/prepare"
-              activeProps={{ "data-active": true }}
-              onClick={() => setMenuOpen(false)}
-            >
-              Prepare application files
-            </Link>
-            <Link
-              to="/fix"
-              activeProps={{ "data-active": true }}
-              onClick={() => setMenuOpen(false)}
-            >
-              Fix a rejected file
-            </Link>
-            <Link
               to="/quick-tools"
               activeProps={{ "data-active": true }}
               onClick={() => setMenuOpen(false)}
             >
-              Use a quick tool
+              Compress files
+            </Link>
+            <Link
+              to="/prepare"
+              activeProps={{ "data-active": true }}
+              onClick={() => setMenuOpen(false)}
+            >
+              Prepare a pack
             </Link>
             <Link
               to="/guides"
@@ -176,6 +166,7 @@ export function SiteFooter() {
           <p>Private file preparation for strict application forms.</p>
         </div>
         <nav aria-label="Footer navigation">
+          <Link to="/fix">Fix a rejection</Link>
           <Link to="/guides">Guides</Link>
           <Link to="/privacy">Privacy</Link>
           <Link to="/limitations">Limitations</Link>

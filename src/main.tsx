@@ -3,7 +3,6 @@ import { RouterProvider } from "@tanstack/react-router"
 import { StrictMode } from "react"
 import { createRoot } from "react-dom/client"
 
-import { PackProvider } from "@/pack-store"
 import { queryClient, router } from "@/router"
 
 import "@/styles.css"
@@ -15,9 +14,7 @@ if (!root) throw new Error("FormPack root element was not found")
 createRoot(root).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <PackProvider>
-        <RouterProvider router={router} />
-      </PackProvider>
+      <RouterProvider router={router} />
     </QueryClientProvider>
   </StrictMode>
 )

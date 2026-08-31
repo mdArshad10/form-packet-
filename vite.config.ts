@@ -1,10 +1,12 @@
 import path from "node:path"
 import { defineConfig } from "vite"
+import tailwindcss from '@tailwindcss/vite'
 
 import { generateStaticSeoPages } from "./scripts/generate-static-seo-pages"
 
 export default defineConfig({
   plugins: [
+    tailwindcss(),
     {
       name: "formpack-static-seo-pages",
       transformIndexHtml(html: string) {

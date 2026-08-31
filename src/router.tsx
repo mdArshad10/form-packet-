@@ -18,6 +18,11 @@ import {
   HomePage,
   LimitationsPage,
   NotFoundPage,
+  PdfCompressorPage,
+  PhotoCompressorPage,
+  PhotoToPdfPage,
+  SignaturePage,
+  ImageDimensionsPage,
   PrivacyPage,
   QuickToolsPage,
   RequirementsPage,
@@ -112,25 +117,43 @@ const quickToolsRoute = createRoute({
 const imageSizeRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/quick-tools/image-size",
-  component: () => <QuickToolsPage tool="image-size" />,
+  component: PhotoCompressorPage,
+})
+
+const photoCompressorRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/photo-compressor",
+  component: PhotoCompressorPage,
 })
 
 const imageDimensionsRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/quick-tools/image-dimensions",
-  component: () => <QuickToolsPage tool="image-dimensions" />,
+  component: ImageDimensionsPage,
 })
 
 const signatureRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/quick-tools/signature",
-  component: () => <QuickToolsPage tool="signature" />,
+  component: SignaturePage,
 })
 
 const pdfSizeRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/quick-tools/pdf-size",
-  component: () => <QuickToolsPage tool="pdf-size" />,
+  component: PdfCompressorPage,
+})
+
+const pdfCompressorRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/pdf-compressor",
+  component: PdfCompressorPage,
+})
+
+const photoToPdfRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/photo-to-pdf",
+  component: PhotoToPdfPage,
 })
 
 const privacyRoute = createRoute({
@@ -171,9 +194,12 @@ const routeTree = rootRoute.addChildren([
   fixResultRoute,
   quickToolsRoute,
   imageSizeRoute,
+  photoCompressorRoute,
   imageDimensionsRoute,
   signatureRoute,
   pdfSizeRoute,
+  pdfCompressorRoute,
+  photoToPdfRoute,
   privacyRoute,
   limitationsRoute,
   guidesRoute,

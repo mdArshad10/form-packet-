@@ -19,6 +19,7 @@ export type PackSlot = {
     name: string
     size: number
     type: string
+    file?: File
   }
 }
 
